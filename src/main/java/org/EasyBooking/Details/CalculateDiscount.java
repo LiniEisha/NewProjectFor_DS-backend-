@@ -56,7 +56,7 @@ public class CalculateDiscount {
 	}
 	
 	public void calculateDiscount() {
-		discount = (amount * percentage)* 100.0;
+		discount = (amount * percentage)/ 100.0;
 		totPrice = amount - discount; 
 	}
 

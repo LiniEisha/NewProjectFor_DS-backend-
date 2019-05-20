@@ -1,53 +1,54 @@
 package org.EasyBooking.Details;
 
 public class CreditCardPayments {
-	private String cardNo;
-	private String cvcNo;
-	private String expDate;
-	private String cardHolder;
+	private String cn;
+	private String cvc;
+	private String expiry;
+	private String name;
 	private double amount;
 	private String email;
+	public CreditCardPayments() {}
 	
-	public CreditCardPayments(String cardNo, String cvcNo, String expDate, String cardHolder, double amount, String email) {
+	public CreditCardPayments(String cn, String cvc, String expiry, String name, double amount, String email) {
 		super();
-		this.cardNo = cardNo;
-		this.cvcNo = cvcNo;
-		this.expDate = expDate;
-		this.cardHolder = cardHolder;
+		this.cn = cn;
+		this.cvc = cvc;
+		this.expiry = expiry;
+		this.name = name;
 		this.amount = amount;
 		this.email = email;
 	}
 
-	public String getCardNo() {
-		return cardNo;
+	public String getCn() {
+		return cn;
 	}
 
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
+	public void setCn(String cn) {
+		this.cn = cn;
 	}
 
-	public String getCvcNo() {
-		return cvcNo;
+	public String getCvc() {
+		return cvc;
 	}
 
-	public void setCvcNo(String cvcNo) {
-		this.cvcNo = cvcNo;
+	public void setCvc(String cvc) {
+		this.cvc = cvc;
 	}
 
-	public String getExpDate() {
-		return expDate;
+	public String getExpiry() {
+		return expiry;
 	}
 
-	public void setExpDate(String expDate) {
-		this.expDate = expDate;
+	public void setExpiry(String expiry) {
+		this.expiry = expiry;
 	}
 
-	public String getCardHolder() {
-		return cardHolder;
+	public String getName() {
+		return name;
 	}
 
-	public void setCardHolder(String cardHolder) {
-		this.cardHolder = cardHolder;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public double getAmount() {
@@ -66,6 +67,8 @@ public class CreditCardPayments {
 		this.email = email;
 	}
 	
-	
+	public void payAndSend() {
+		
+	}
 
 }

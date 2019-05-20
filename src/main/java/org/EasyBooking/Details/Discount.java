@@ -3,13 +3,17 @@ package org.EasyBooking.Details;
 public class Discount {
 	
 	private double amount;
-	private int Percentage;
+	private int percentage;
 	private String nIC;
+	
+	public Discount() {
+		
+	}
 	
 	public Discount(double amount, int percentage, String nIC) {
 		super();
 		this.amount = amount;
-		Percentage = percentage;
+		percentage = percentage;
 		this.nIC = nIC;
 	}
 
@@ -22,11 +26,11 @@ public class Discount {
 	}
 
 	public int getPercentage() {
-		return Percentage;
+		return percentage;
 	}
 
 	public void setPercentage(int percentage) {
-		Percentage = percentage;
+		percentage = percentage;
 	}
 
 	public String getnIC() {

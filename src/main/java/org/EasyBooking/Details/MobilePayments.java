@@ -6,6 +6,8 @@ public class MobilePayments {
 	private String email;
 	private double amount;
 	
+	public MobilePayments() {}
+	
 	public MobilePayments(String name, String mobileNumber, String email, double amount) {
 		super();
 		Name = name;

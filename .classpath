@@ -39,5 +39,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/SLIIT/stuff/servlet-api.jar/servlet-api.jar"/>
+	<classpathentry kind="lib" path="H:/java mail API/activation.jar"/>
+	<classpathentry kind="lib" path="H:/java mail API/javax.mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="D:/SLIIT/stuff/twilio-7.38.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -47,33 +47,43 @@ import org.EasyBooking.Details.Discount;
 		    @Produces(MediaType.APPLICATION_JSON)
 		    public CalculateDiscount getDiscount(Discount discount, @Context HttpServletResponse response, @Context HttpServletRequest request) {
 		    	response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
+		    	
+//		    	discount.setnIC("hello");
+		    	
+		    	System.out.println("Body eke tyenne: " + discount.getnIC());
 	
+		    	System.out.println("machan uba athuleda...ehenm ude nic eka " + discount.getnIC() + " amount :" + discount.getAmount() + " Percentage : " + discount.getPercentage());
 
-		    	String nic = discount.getnIC();
 		    	double amount = discount.getAmount();
-		    	int percentage = discount.getPercentage();
+		    	int percentage = 20;
+		    	String national = discount.getnIC();
+		    	
 		    	CalculateDiscount discountCal = new CalculateDiscount();
 		    	
 		    	for(Customer c1 : customer) {
-		    		if(c1. getNIC().equalsIgnoreCase(nic)) {
-		    			discountCal = new CalculateDiscount( amount ,  percentage);
+		    		System.out.println(c1.getNIC());
+		    		if(c1. getNIC().equalsIgnoreCase(national)) {
+		    			discountCal.setAmount(amount);
+		    			discountCal.setPercentage(percentage);
 		    			discountCal.calculateDiscount();
 		    			System.out.println("amount : " +amount);
 		    			System.out.println("Precentage: " + percentage);
-		    			System.out.println(discountCal.getTotPrice());
+		    			System.out.println(discountCal.getDiscount());
+		    			return discountCal;
 		    		}
 		    	}
-		    	return discountCal; 	
+		    	 	
+		    	return discountCal;
 		  }
 		  
-		  @Path("/customerdiscount")
-		    @OPTIONS
-		    @Produces(MediaType.APPLICATION_JSON)
-		    public Response getCustomerResponse(@Context HttpServletRequest request) {
-		    	return Response.ok()
-		    			.header("Access-Control-Allow-Origin", request.getHeader("Origin"))
-		    			.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-		    			.header("Access-Control-Allow-Headers", "content-type")
-		    			.build();
-		    }}
+	    @Path("/employeediscount")
+	    @OPTIONS
+	    @Produces(MediaType.APPLICATION_JSON)
+	    public Response getCustomerResponse(@Context HttpServletRequest request) {
+	    	return Response.ok()
+	    			.header("Access-Control-Allow-Origin", request.getHeader("Origin"))
+	    			.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+	    			.header("Access-Control-Allow-Headers", "content-type")
+	    			.build();
+	    }}
 		  

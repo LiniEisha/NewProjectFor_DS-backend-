@@ -34,7 +34,7 @@ public class DBConnectionforCustomers {
 		        while(collectionCursor.hasNext()) {
 		        	BasicDBObject col = (BasicDBObject) collectionCursor.next();
 		        	System.out.println(col.get("Name"));
-		        	customer.add(new Customer(col.get("ID").toString() , col.get("Name").toString() , col.get("NIC").toString()));
+		        	customer.add(new Customer(col.get("Name").toString() , col.get("NIC").toString(), col.get("ID").toString()));
 		        }
 		        
 	        } catch (MongoException e) {
